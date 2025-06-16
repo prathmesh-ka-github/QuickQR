@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    font-family:  "Open Sans", Arial, sans-serif;
+    color: white;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #240724;
+    background-image: linear-gradient(120deg,rgba(36, 7, 36, 1) 0%, rgba(48, 6, 48, 1) 10%, rgba(115, 13, 110, 1) 60%, rgba(36, 7, 36, 1) 100%);
+    /* background-image: linear-gradient(45deg, red, blue); */
+    background-size: 300%;
+    background-position: left;
+    animation: gradientanimation 30s ease infinite alternate-reverse;
+    transition: all 300ms;
+}
+/* ----------------------------------------Gradient animation---------------------------------- */
+
+@keyframes gradientanimation {
+    0% {
+        background-position: left;
+      }
+      100% {
+        background-position: right;
+      }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headingtxt {
+    font-family: 'Josefin Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 6rem;
+    font-weight: 400;
+}
+.subtxt {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.output {
+    height: 0px;
+    margin: 20px;
+    transition: all 300ms ease;
+}
+
+.inputfieldcontainer {
+    width: 100%;
+    margin: 20px 0px 10px 0px;
+}
+
+input {
+    all: unset;
+    background-color: #530753;
+    border-bottom: #240724 5px solid;
+    width: calc(100% - 40px);
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 20px;
+    transition: all 400ms;
+    text-align: center;
+}
+input:hover {
+    background-color: hsl(300, 84%, 20%)
+}
+input::placeholder {
+    color: #4f4f4f;
+}
+
+button {
+    all: unset;
+    background-color: hsl(300, 79%, 20%);
+    border-bottom: #240724 5px solid;
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 10px 20px;
+    transition: all 400ms;
+}
+button:hover {
+    background-color: hsl(300, 79%, 22%);
+
+}
+.mascotimg {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+}

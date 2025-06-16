@@ -6,8 +6,22 @@
     <title>Quick QR</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="Assets/scan-qr-code.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt="">
+    <!-- <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Example" alt=""> -->
+    <div class="wrapper">
+        <div class="main-container">
+            <div class="headingtxt">QuickQR</div>
+            <div class="subtxt">Turn links into magic squares!</div>
+            <img src="https://github.com/prathmesh-ka-github" id="output" class="output" alt="generated qr code">
+            <div class="inputfieldcontainer">
+                <input placeholder="https://github.com/prathmesh-ka-github" type="text" name="input" id="input">
+            </div>
+            <button onclick="genqr()">Generate QR</button>
+        </div>
+        <img class="mascotimg" src="Assets/qrmascot.png" alt="">
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
