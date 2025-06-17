@@ -85,7 +85,7 @@ input:hover {
     background-color: hsl(300, 84%, 20%)
 }
 input::placeholder {
-    color: #4f4f4f;
+    color: #a3a3a3;
 }
 
 button {
