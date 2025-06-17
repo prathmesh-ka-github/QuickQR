@@ -14,7 +14,10 @@
         <div class="main-container">
             <div class="headingtxt">QuickQR</div>
             <div class="subtxt">Turn links into magic squares!</div>
-            <img src="https://prathmesh-ka-github.github.io/pratham-c0des./" id="output" class="output" alt="generated qr code">
+            <div id="output-container">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://github.com/prathmesh-ka-github" id="output" class="output" alt="generated qr code">
+                <div id="instructions">Right click and download 👆🏻</div>
+            </div>
             <div class="inputfieldcontainer">
                 <input placeholder="https://prathmesh-ka-github.github.io/pratham-c0des./" type="text" name="input" id="input">
             </div>

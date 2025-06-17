@@ -19,6 +19,7 @@ body {
     background-position: left;
     animation: gradientanimation 25s infinite alternate-reverse;
     transition: all 300ms;
+    position: relative;
 }
 /* ----------------------------------------Gradient animation---------------------------------- */
 
@@ -37,6 +38,7 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 20;
+    padding-bottom: 100px;
 }
 
 .headingtxt {
@@ -47,12 +49,19 @@ body {
 .subtxt {
     color: #e0e0e0;
     font-size: 1.2rem;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .output {
+    height: 150px;
+    margin: 10px auto 20px auto;
+    cursor: pointer;
+}
+#output-container{
+    display: flex;
+    flex-direction: column;
     height: 0px;
-    margin: 20px;
+    overflow: hidden;
     transition: all 300ms ease;
 }
 

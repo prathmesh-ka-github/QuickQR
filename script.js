@@ -1,4 +1,8 @@
 console.log("JS working")
+function reveal() {
+    let oContainer = document.getElementById('output-container')
+    oContainer.style.height ="212px"
+}
 async function genqr() {
     let input = document.getElementById('input').value
     let output = document.getElementById('output')
@@ -9,5 +13,10 @@ async function genqr() {
     } else {
         output.src = apistring
     }
-    output.style.height ="150px"
+    setTimeout(reveal(), 5000);
+    // oContainer.style.height ="212px"
+}
+
+if (window.innerWidth<600) {
+    document.getElementById('instructions').innerHTML = "Tap and hold to download 👆🏻"
 }
