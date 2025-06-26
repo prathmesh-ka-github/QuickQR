@@ -10,8 +10,8 @@ Just enter your content, generate the code, and scan or save it in seconds. Perf
 ![QuickQR](image.png)
 
 ### Tech Stack -
-1. HTML
-1. CSS
+1. HTML 5
+1. CSS 3
 1. JavaScript
 
 API used - https://goqr.me/api/doc/
@@ -21,3 +21,6 @@ TODO:
 1. ~~Download instructions as per devices.~~
 1. ~~Responsive design~~
 1. ~~Smooth Animated background gradient~~
+1. Add a file format selector somehow
+1. Add a dimentions selector somehow
+1.
