@@ -3,9 +3,10 @@
 
 body {
     margin: 0;
-    font-family:  "Open Sans", Arial, sans-serif;
+    font-family: "Open Sans", Arial, sans-serif;
     color: white;
 }
+
 .wrapper {
     display: flex;
     width: 100%;
@@ -13,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     background: #240724;
-    background-image: linear-gradient(120deg,rgba(36, 7, 36, 1) 0%, rgba(48, 6, 48, 1) 10%, rgba(115, 13, 110, 1) 60%, rgba(36, 7, 36, 1) 100%);
+    background-image: linear-gradient(120deg, rgba(36, 7, 36, 1) 0%, rgba(48, 6, 48, 1) 10%, rgba(115, 13, 110, 1) 60%, rgba(36, 7, 36, 1) 100%);
     /* background-image: linear-gradient(45deg, red, blue); */
     background-size: 300%;
     background-position: left;
@@ -21,15 +22,17 @@ body {
     transition: all 300ms;
     position: relative;
 }
+
 /* ----------------------------------------Gradient animation---------------------------------- */
 
 @keyframes gradientanimation {
     0% {
         background-position: left;
-      }
-      100% {
+    }
+
+    100% {
         background-position: right;
-      }
+    }
 }
 
 .main-container {
@@ -46,6 +49,7 @@ body {
     font-size: 7rem;
     font-weight: 400;
 }
+
 .subtxt {
     color: #e0e0e0;
     font-size: 1.2rem;
@@ -57,7 +61,8 @@ body {
     margin: 10px auto 20px auto;
     cursor: pointer;
 }
-#output-container{
+
+#output-container {
     display: flex;
     flex-direction: column;
     height: 0px;
@@ -81,14 +86,16 @@ input {
     transition: all 400ms;
     text-align: center;
 }
+
 input:hover {
     background-color: hsl(300, 84%, 20%)
 }
+
 input::placeholder {
     color: #a3a3a3;
 }
 
-#fileType {
+/* #fileType {
     all: unset;
     background-color: hsl(300, 79%, 20%);
     border: 0px;
@@ -96,9 +103,15 @@ input::placeholder {
     border-radius: 30px;
     margin-right: 10px;
     font-size: 15px;
-    /* text-align: center; */
+    text-align: center;
     padding: 10px 20px;
     transition: all 400ms;
+} */
+
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gen-btn {
@@ -108,12 +121,15 @@ input::placeholder {
     border-radius: 30px;
     font-size: 15px;
     padding: 10px 20px;
+    margin-left: 10px;
     transition: all 400ms;
 }
+
 .gen-btn:hover {
     background-color: hsl(300, 79%, 22%);
 
 }
+
 .mascotimg {
     position: absolute;
     bottom: 50px;
@@ -124,6 +140,7 @@ input::placeholder {
     .headingtxt {
         font-size: 5rem;
     }
+
     .mascotimg {
         width: 50%;
         bottom: 0px;
@@ -131,7 +148,93 @@ input::placeholder {
         top: auto;
         left: auto;
     }
+
     .main-container {
         padding-bottom: 100px;
     }
+}
+
+
+/* ! CUSTOM SELECT */
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element:*/
+}
+
+.select-selected {
+    background-color: hsl(300, 79%, 20%);
+    border: 0px;
+    border-bottom: #240724 5px solid;
+    border-radius: 30px;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 40px 10px 20px;
+    transition: all 400ms;
+}
+
+.select-selected:hover {
+    background-color: hsl(300, 79%, 22%);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: hsl(300, 79%, 22%);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 0px 0px 15px 15px;
+    
+}
+.select-items div {
+    text-align: center;
+    padding: 10px 20px;
+}
+.select-items div:nth-child(3) {
+    border-radius: 0px 0px 15px 15px;
+    border-bottom: #240724 5px solid;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
