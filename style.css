@@ -88,7 +88,20 @@ input::placeholder {
     color: #a3a3a3;
 }
 
-button {
+#fileType {
+    all: unset;
+    background-color: hsl(300, 79%, 20%);
+    border: 0px;
+    border-bottom: #240724 5px solid;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-size: 15px;
+    /* text-align: center; */
+    padding: 10px 20px;
+    transition: all 400ms;
+}
+
+.gen-btn {
     all: unset;
     background-color: hsl(300, 79%, 20%);
     border-bottom: #240724 5px solid;
@@ -97,7 +110,7 @@ button {
     padding: 10px 20px;
     transition: all 400ms;
 }
-button:hover {
+.gen-btn:hover {
     background-color: hsl(300, 79%, 22%);
 
 }
